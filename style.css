@@ -5,21 +5,22 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 nav img {
-  width: 48px;
+  max-width: 48px;
+  width: 100%;
   height: 48px;
+  object-fit: cover;
 }
 
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: #f5f5f7cc;
   opacity: 80%;
   width: 100%;
 }
-
-.apple {
-  margin-right: 197px;
+nav div {
+  display: flex;
 }
 
 h4 {
@@ -33,125 +34,97 @@ h4 {
   text-align: center;
 }
 
-.mobile {
+section {
   width: 100%;
   height: 500px;
-  text-align: center;
   margin-bottom: 16px;
+  background-image: no-repeat;
+  background-size: cover;
+  text-align: center;
 }
 
-.mobile__background--photo {
-  background-image: url(./images/Figure.png);
-}
-
-.toptext {
+.section__title {
   width: 100%;
-  border: 1px solid red;
-  margin: auto;
-  padding-top: 350px;
 }
 
-.toptext--position {
-  top: 350px;
-}
-
-.toptext h1 {
+.section__title h1 {
   font-size: 30px;
-  color: white;
+  margin-bottom: 4px;
 }
 
-.toptext p {
+.section__title p {
   font-size: 18px;
+  font-weight: lighter;
+}
+
+.section_btn {
+  width: 100%;
+}
+.section__one__title {
   color: white;
+  padding-top: 350px;
+  padding-bottom: 16px;
 }
 
-.button {
-  margin-top: 16px;
-}
-
-.btn__top {
+.btn {
   width: 107px;
   height: 36px;
   border-radius: 999px;
-  border: 0px;
-  margin-right: 12px;
-}
-
-.btn__top--color {
+  border: 1px solid #2997ff;
   background-color: #0071e3;
   color: white;
+  margin-right: 12px;
 }
 
 .btn__buy {
   width: 66px;
-  height: 36px;
-  border-radius: 999px;
-
-  background-color: transparent;
-}
-
-.btn__buy--color {
   border: 1px solid #2997ff;
+  background-color: transparent;
   color: #2997ff;
 }
 
-.mobile__background--photo1 {
+.section__one--background {
+  background-image: url(./images/iphone16pro.png);
+}
+
+.section__two--background {
   background-image: url(./images/iphone16photo.png);
 }
 
-.toptext--position1 {
-  bottom: 350px;
-}
-
-.toptext--size1 h1 {
-  font-size: 30px;
+.section__two__title {
   color: white;
+  padding-top: 36px;
+  padding-bottom: 16px;
 }
 
-.toptext--size1 p {
-  font-size: 18px;
-  color: white;
-}
-
-.btn__top--color1 {
-  background-color: white;
-}
-
-.btn__buy--color1 {
+.section__two__btn__learn--color {
   border: 1px solid white;
-  color: white;
-}
-
-.mobile__background--photo2 {
-  background-image: url(./images/ipadAir.png);
-}
-
-.mobile__background--photo2 img {
-  margin-bottom: 8px;
-}
-
-.toptext--position2 {
-  bottom: 350px;
-}
-
-.toptext--position2 p {
+  background-color: white;
   color: black;
 }
 
-.btn__top--color2 {
-  background-color: #0071e3;
+.section__two__btn__buy--color {
+  border: 1px solid white;
+  background-color: transparent;
   color: white;
 }
 
-.btn__buy--color2 {
-  border: 1px solid #2997ff;
-  color: #2997ff;
+.section__three--background {
+  background-image: url(./images/ipadAir.png);
+}
+.section__three__ipadtext {
+  margin-bottom: 8px;
+}
+.section__three__title {
+  padding-top: 36px;
+  padding-bottom: 16px;
 }
 
 .gradient {
   font-size: 14px;
-  position: absolute;
-  top: 416px;
+  letter-spacing: 0%;
+  text-align: center;
+  padding-top: 300px;
   background: linear-gradient(
     90.43deg,
     #0090f7 0%,
@@ -160,16 +133,29 @@ h4 {
     #f55600 100%
   );
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
-.mobile__background--photo3 {
+.section__four--background {
   background-image: url(./images/airpod.png);
 }
-.toptext--position3 {
-  top: 292px;
+
+.section__four__title {
+  color: white;
+  padding-top: 292px;
 }
 
-.toptext-position3 p {
+.section__four__text {
   width: 200px;
+  margin-inline: auto;
+  margin-bottom: 16px;
+}
+
+.section__five--background {
+  background-image: url(./images/iwatch.png);
+}
+
+.section__five__logo {
+  width: 22;
+  height: 27;
 }
