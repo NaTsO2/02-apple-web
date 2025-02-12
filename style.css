@@ -23,6 +23,10 @@ nav div {
   display: flex;
 }
 
+.nav__link {
+  display: none;
+}
+
 h4 {
   display: flex;
   justify-content: center;
@@ -139,6 +143,10 @@ section {
   color: transparent;
 }
 
+.card {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .section__four--background {
   background-image: url(./images/airpod.png);
 }
@@ -152,11 +160,6 @@ section {
   width: 200px;
   margin-inline: auto;
   margin-bottom: 16px;
-}
-
-.card {
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .section__five--background {
@@ -246,6 +249,10 @@ section {
   overflow-x: scroll;
 }
 
+.scroll__tablet__photo {
+  display: none;
+}
+
 .tablist {
   width: 220px;
   height: 8px;
@@ -254,10 +261,38 @@ section {
   gap: 14px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 16px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.scroll__tablet__photo {
+  position: relative;
+}
+.scroll__stream {
+  display: flex;
+  position: absolute;
+  top: 305px;
+  left: 30px;
+  gap: 18px;
 }
 
-span {
+.scroll__text {
+  color: white;
+  width: 401px;
+  text-align: left;
+}
+.bold {
+  font-weight: bold;
+}
+.scroll__btn {
+  width: 108px;
+  height: 36px;
+  border-radius: 999px;
+  border-color: 0;
+  background-color: white;
+  overflow: auto;
+}
+
+.dot {
   display: block;
   width: 8px;
   height: 8px;
@@ -270,12 +305,23 @@ span {
   display: flex;
   gap: 6px;
   overflow-x: scroll;
+  width: 1200px;
 }
 
-.album__one {
+.album__mobile {
   width: 238px;
   height: 134px;
   background: #6529cf;
+}
+.album__tablet {
+  position: relative;
+  width: 286;
+  height: 161;
+  background-color: green;
+  display: none;
+}
+.album__tablet p {
+  position: absolute;
 }
 .playbutton {
   width: 24px;
@@ -293,7 +339,7 @@ span {
   .section__three--background {
     background-image: url(./images/tablet/ipadair.png);
   }
-  section {
+  .tablet {
     width: 100%;
     height: 650px;
     margin-bottom: 12px;
@@ -314,13 +360,13 @@ span {
   .section__one__title {
     padding-top: 58px;
   }
-  .btn {
+  .tablet__btn {
     width: 123px;
     height: 44px;
     margin-right: 16px;
   }
 
-  .btn__buy {
+  .tablet__btn__buy {
     width: 68px;
   }
   .gradient {
@@ -332,11 +378,36 @@ span {
     font-size: 22px;
   }
   .cards__container {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
+    max-width: 1200px;
+    gap: 12px;
   }
 
   .card {
-    width: 50%;
+    width: 49%;
+  }
+
+  .mobile__photo {
+    display: none;
+  }
+
+  .scroll__tablet__photo {
+    display: block;
+  }
+
+  .album__mobile {
+    display: none;
+  }
+  .album_tablet {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1204px) {
+  .nav__link {
+    display: block;
   }
 }
