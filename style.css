@@ -37,7 +37,16 @@ h4 {
   font-weight: lighter;
   text-align: center;
 }
+.desktop__figure--block {
+  display: none;
+}
 
+.section__subthree {
+  display: none;
+}
+.section__ten {
+  display: none;
+}
 section {
   width: 100%;
   height: 500px;
@@ -160,6 +169,10 @@ section {
   background-image: url(./images/airpod.png);
 }
 
+.section__subfour {
+  display: none;
+}
+
 .section__four__title {
   color: white;
   padding-top: 292px;
@@ -202,7 +215,7 @@ section {
   margin-bottom: 16px;
 }
 .section__six__title {
-  padding-top: 42px;
+  padding-top: 48px;
 }
 .section__seven--background {
   background-image: url(./images/applesmallbusiness.png);
@@ -313,19 +326,27 @@ section {
 .album {
   display: flex;
   gap: 6px;
-  overflow-x: scroll;
-  /* width: 1200px; */
+  margin-inline: auto;
+  position: relative;
+  overflow: hidden;
 }
 
-.album__mobile {
+.item {
   width: 238px;
   height: 134px;
   background: #6529cf;
+  left: 100%;
+  position: absolute;
+  animation: move 5s linear infinite;
+}
+
+.album__tablet__animation {
+  display: none;
 }
 .album__tablet {
   position: relative;
-  width: 286;
-  height: 161;
+  width: 286px;
+  height: 161px;
   background-color: green;
   display: none;
 }
@@ -338,6 +359,15 @@ section {
   margin: 16px 16px 16px 350px;
 }
 
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1000px);
+  }
+}
+
 @media screen and (min-width: 700px) {
   .section__one--background {
     background-image: url(./images/tablet/iphone16pro.png);
@@ -347,6 +377,17 @@ section {
   }
   .section__three--background {
     background-image: url(./images/tablet/ipadair.png);
+  }
+
+  .desktop__figure--block {
+    display: none;
+  }
+
+  .section__subthree {
+    display: none;
+  }
+  .section__ten {
+    display: none;
   }
   .tablet {
     width: 100%;
@@ -410,8 +451,9 @@ section {
   .album__mobile {
     display: none;
   }
-  .album_tablet {
+  .album__tablet__animation {
     display: block;
+    animation: move 8s linear infinite;
   }
 }
 
@@ -433,47 +475,98 @@ section {
   }
 
   .section__three--background {
-    background-image: url(./images/desktopphoto/applegift.png);
+    display: none;
   }
-  .section__four--background {
+
+  .section__subthree {
     background-image: url(./images/desktopphoto/ipadair.png);
   }
 
-  .section__five--background {
+  .desktop__figure--background {
+    background-image: url(./images/desktopphoto/applegift.png);
+  }
+  .section__four--background {
     background-image: url(./images/desktopphoto/airpodbig.png);
   }
 
+  .section__five--background {
+    background-image: url(./images/desktopphoto/iwatchone.png);
+  }
+
   .section__six--background {
-    background-color: url(./images/desktopphoto/iwatchone.png);
-  }
-
-  .section__seven--background {
-    background-image: url(./images/desktopphoto/macbookbig.png);
-  }
-
-  .section__eight--background {
-    background-image: url(./images/desktopphoto/tradein.png);
+    background-color: url(./images/desktopphoto/macbookbig.png);
   }
 
   .section__nine--background {
+    background-image: url(./images/desktopphoto/tradein.png);
+  }
+
+  .section__ten--background {
     background-image: url(./images/desktopphoto/applecard.png);
   }
+
   .cards__container {
     max-width: 100%;
   }
   .card {
     height: 580px;
   }
+  .section__ten {
+    display: block;
+  }
+  .desktop__figure--block {
+    display: block;
+  }
 
-  .gradient {
+  .desktop__figure__text__container {
+    padding-top: 446px;
+  }
+  .desktop__figure__text__container p {
+    padding-bottom: 16px;
+  }
+
+  .section__subthree {
+    display: block;
+  }
+
+  .desktop__older__none {
     display: none;
   }
 
-  .desktop__title {
+  .section__ten__btn__buy--color {
+    background-color: transparent;
+    color: #2997ff;
+  }
+
+  .section__ten__title {
+    padding-top: 58px;
+  }
+
+  .section__ten__subtitle {
+    padding-bottom: 4px;
+  }
+
+  .section__ten__text {
+    padding-bottom: 16px;
+  }
+
+  .gradient {
+    padding-top: 350px;
+  }
+
+  .desktop__four__none {
+    display: none;
+  }
+
+  .section__subfour {
     display: block;
   }
 
-  .desktop__text {
-    display: block;
+  .section__four__title {
+    padding-top: 401px;
+  }
+
+  .section__four__text {
+    width: 100%;
   }
 }
