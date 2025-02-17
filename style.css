@@ -269,6 +269,12 @@ section {
   display: flex;
   gap: 16px;
   overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+.mobile__photo {
+  width: fit-content;
+  height: fit-content;
+  scroll-snap-align: center;
 }
 
 .scroll__tablet__photo {
@@ -323,36 +329,60 @@ section {
   opacity: 0.4;
 }
 
+footer {
+  overflow: hidden;
+}
+.album__mobile1 {
+  background-image: url(./images/footerphoto1.jpeg);
+}
+.album__mobile2 {
+  background-image: url(./images/footerphoto2.jpeg);
+}
+.album__mobile3 {
+  background-image: url(./images/footerphoto3.jpeg);
+}
+
 .album {
+  width: fit-content;
+  height: fit-content;
   display: flex;
   gap: 6px;
   margin-inline: auto;
-  position: relative;
-  overflow: hidden;
 }
 
 .item {
   width: 238px;
   height: 134px;
-  background: #6529cf;
-  left: 100%;
-  position: absolute;
-  animation: move 5s linear infinite;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: move 30s linear infinite;
 }
-
-.album__tablet__animation {
-  display: none;
+.footer__tablet__slider {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  gap: 6px;
 }
-.album__tablet {
-  position: relative;
+.slider {
   width: 286px;
   height: 161px;
   background-color: green;
   display: none;
+  animation: move 30s linear infinite;
+  position: relative;
 }
-.album__tablet p {
+
+.footer__logo {
   position: absolute;
+  left: 225px;
+  top: 135px;
 }
+
+.slider p {
+  position: absolute;
+  top: 20px;
+}
+
 .playbutton {
   width: 24px;
   height: 24px;
@@ -361,10 +391,10 @@ section {
 
 @keyframes move {
   from {
-    transform: translateX(0);
+    transform: translateX(100%);
   }
   to {
-    transform: translateX(-1000px);
+    transform: translateX(-300%);
   }
 }
 
@@ -447,13 +477,11 @@ section {
   .scroll__tablet__photo {
     display: block;
   }
-
-  .album__mobile {
+  .album {
     display: none;
   }
-  .album__tablet__animation {
+  .slider {
     display: block;
-    animation: move 8s linear infinite;
   }
 }
 
