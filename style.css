@@ -278,9 +278,15 @@ section {
 }
 
 .scroll__tablet__photo {
+  scroll-snap-align: center;
   display: none;
+  position: relative;
 }
-
+.scroll__desktop__photo {
+  scroll-snap-align: center;
+  display: none;
+  position: relative;
+}
 .tablist {
   width: 220px;
   height: 8px;
@@ -292,9 +298,7 @@ section {
   margin-top: 12px;
   margin-bottom: 12px;
 }
-.scroll__tablet__photo {
-  position: relative;
-}
+
 .scroll__stream {
   display: flex;
   position: absolute;
@@ -306,6 +310,8 @@ section {
 .scroll__text {
   color: white;
   width: 401px;
+  padding-top: 6px;
+  font-size: 17px;
   text-align: left;
 }
 .bold {
@@ -383,10 +389,42 @@ footer {
   top: 20px;
 }
 
+.footer__desktop__slider {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  gap: 6px;
+}
+
+.slider__desktop__common {
+  animation: move 30s linear infinite;
+  display: none;
+}
+
+.slider__desktop__two {
+  width: 417px;
+  height: 236px;
+  background: #1b2632;
+  position: relative;
+}
+
+.slider__desktop__five {
+  width: 417px;
+  height: 236px;
+  background: #ebb799;
+  position: relative;
+}
+.desktop-slider {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+}
+
 .playbutton {
   width: 24px;
   height: 24px;
-  margin: 16px 16px 16px 350px;
+  margin-top: 16px;
+  margin-left: 90%;
 }
 
 @keyframes move {
@@ -482,6 +520,10 @@ footer {
   }
   .slider {
     display: block;
+  }
+
+  .scroll__desktop__photo {
+    display: none;
   }
 }
 
@@ -596,5 +638,30 @@ footer {
 
   .section__four__text {
     width: 100%;
+  }
+
+  .scroll__tablet__photo {
+    display: none;
+  }
+
+  .scroll__desktop__photo {
+    display: block;
+  }
+
+  .scroll__stream {
+    top: 566px;
+    left: 70px;
+    gap: 18px;
+  }
+
+  .footer__tablet__slider {
+    display: none;
+  }
+  .slider__desktop__common {
+    display: block;
+  }
+
+  .nav__menu {
+    display: none;
   }
 }
